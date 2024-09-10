@@ -1,59 +1,65 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: rgb(238,174,202);
-  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
 }
 
 .container {
-  max-width: 600px;
+  width: 1000px;
   margin: 0 auto;
-  background: rgb(233, 215, 215);
+  background: rgba(82, 75, 75, 0.6);
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 5px rgb(101, 96, 77);
-  
+  border-radius: 25px;
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+  position: relative; 
+  z-index: 1; 
 }
 
 h1 {
   text-align: center;
-  color: rgb(94, 51, 116);
+  color: rgb(202, 121, 0);
+  font-size: 60px;
+  font-weight: 800;
+  text-shadow: 2px 2px 2px #363636;
 }
 
 input[type="text"] {
-  width: calc(100% - 22px);
+  width: calc(62% - 22px);
   padding: 10px;
   margin-bottom: 10px;
+  margin-right: 20px;
   border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: 25px;
+  box-shadow: 0 0 5px rgb(101, 96, 77);
 }
 
 .addbutton {
-  width: 100%;
-  padding: 10px;
-  background: rgb(94, 51, 116);
+  width: 15%;
+  padding: 12px;
+  background: rgb(202, 121, 0);
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 25px;
   cursor: pointer;
+  margin-left: 24px;
+  box-shadow: 0 0 5px rgb(101, 96, 77);
 }
 
 button:hover {
-  background: rgb(81, 41, 100);
+  background: rgb(180, 109, 3);
 }
 
 ul {
   list-style-type: none;
   padding: 0;
+  background-color: rgb(220, 171, 96);
+  border-radius: 25px;
+  box-shadow: 0 0 5px rgb(101, 96, 77);
+  
   
 }
 
 li {
-  padding: 10px;
+  padding: 20px;
   border-bottom: 1px solid #a28e8e;
   display: flex;
   align-items: center;
@@ -61,23 +67,88 @@ li {
 }
 
 li button {
-  background: rgb(183, 171, 196);
+  background: rgb(128, 113, 143);
   border: none;
   color: white;
   padding: 5px 10px;
-  border-radius: 4px;
+  border-radius: 25px;
   cursor: pointer;
-  align-self: self-end;
+  align-self: center;
+  box-shadow: 0 0 3px rgb(27, 26, 23);
+  
 }
 
 li button:hover {
-  background: rgb(154, 140, 161);
+  background: rgb(101, 76, 114);
 }
 
 span {
-  min-width: 500px;
-  max-width: 500px; 
+  min-width: 130px;
+  max-width: 130px; 
   word-wrap: break-word; 
-  margin: 0 21px; 
+  margin: 0 25px; 
   overflow-wrap: break-word; 
+  align-self: center;
 }
+
+.task-description {
+  width: 400px;
+  max-width: 400px;
+ 
+}
+
+.task-deadline {
+  width: 250px;
+  max-width: 250px;
+  text-align: center;
+}
+
+label {
+  color: wheat;
+}
+
+.task-annotation {
+  text-align: center;
+}
+
+.datetime-picker {
+  width: 20px; 
+  padding: 6px; 
+  border-radius: 10px; 
+  margin-left: 4px;
+  font-size: 17px;
+  background-color: #f9f9f9; 
+  transition: border-color 0.3s; 
+}
+
+.datetime-picker:focus {
+  border-color: #000000; 
+}
+
+.video-wrapper {
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
+  overflow: hidden; 
+  z-index: -1; 
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+#background-video {
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  min-width: 100%; 
+  min-height: 100%; 
+  width: auto; 
+  height: auto;
+  transform: translate(-50%, -50%); 
+  z-index: -1;
+  pointer-events: none;
+}
+
+
